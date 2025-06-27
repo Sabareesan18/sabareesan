@@ -1,4 +1,22 @@
+import {img1,img2,img3} from './mycomp/images'
 
+
+function App()
+{
+  return(
+    <>
+    <img src={img1} width="300"alt="wrong path"></img>
+      <img src={img2} width="300"alt="wrong path"></img>
+        <img src={img3} width="300"alt="wrong path"></img>  
+    
+    </>
+  )
+}
+export default App
+
+
+
+/*
 import Failure from "./mycomp/Failure"
 import Success from "./mycomp/Success"
 
