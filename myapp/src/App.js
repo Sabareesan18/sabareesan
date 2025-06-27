@@ -1,4 +1,27 @@
-import logo from './logo.svg';
+
+import Failure from "./mycomp/Failure"
+import Success from "./mycomp/Success"
+
+
+function App()
+{
+var a=100
+var b=200
+var isuser=true
+return(
+<>
+Biggest value:{(a>b) ? a:b}
+{isuser ? <Success/>:<Failure/>}
+
+</>
+
+)
+
+}
+export default App
+
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -23,3 +46,4 @@ function App() {
 }
 
 export default App;
+*/

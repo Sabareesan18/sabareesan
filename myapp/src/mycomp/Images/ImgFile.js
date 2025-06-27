@@ -1,0 +1,1 @@
+export const img1=require("..img1.jpg")
