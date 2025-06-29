@@ -1,4 +1,30 @@
-import { img1, img2, img3 } from "./mycomp/Images/ImgFile"
+
+
+function App()
+{
+const mystyle={
+  color:"white",
+  backgroundcolor:"blue",
+  border:"5px solid red"
+
+
+
+}
+return(
+  <>
+  <h1 style={mystyle} welcome to header></h1>
+  <h1 style={{backgroundcolor:"red",color:"blue",fontsize:"22px"}}></h1>
+   <h1 style={mystyle} welcome to header></h1>
+    <h1 style={mystyle} welcome to header></h1>
+    <h2>this is header 2</h2> 
+     <h2>this is header 2</h2> 
+  
+  </>
+)
+
+}
+export default App
+/*import { img1, img2, img3 } from "./mycomp/Images/ImgFile"
 
 
 
