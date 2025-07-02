@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+var sobj={
+  rno:1001,
+  sname:"sabareesan",
+  mark1:99,
+  mark2:98,
+  mark3:66
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App sname="sabareesan" mark="100"/>
+    <App myobj={sobj}/>
   </React.StrictMode>
 );
 

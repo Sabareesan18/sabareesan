@@ -2,8 +2,11 @@ function App(props)
 {
   return(
     <>
-    <h1>student name:{props.sname}</h1>
-    <h2>student mark:{props.mark}</h2>
+    <h1>student roll number:{props.myobj.rno}</h1>
+    <h2>studentname:{props.myobj.sname}</h2>
+    <h2>studentmark1:{props.myobj.mark1}</h2>
+    <h2>studentmark2:{props.myobj.mark2}</h2>
+    <h2>studentmark3:{props.myobj.mark3}</h2>
     
     
     </>
