@@ -1,0 +1,17 @@
+h2{
+    font-size: 22px;
+    color:brown;
+    background-color: blue;
+    border: 5px double yellow;
+    border-radius:10px;
+    position:relative;
+    animation-name: sabareesan ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes sabareesan
+{
+    from{left:0px}
+    to {left:1000px}
+}
