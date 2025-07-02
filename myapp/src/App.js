@@ -1,3 +1,16 @@
+function App(props)
+{
+  return(
+    <>
+    <h1>student name:{props.sname}</h1>
+    <h2>student mark:{props.mark}</h2>
+    
+    
+    </>
+  )
+}
+export default App
+/*
 import './mycomp/Images/mycss.css'
 
 function App()

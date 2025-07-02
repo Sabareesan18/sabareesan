@@ -1,6 +1,6 @@
 h2{
     font-size: 22px;
-    color:brown;
+    color:greenyellow;
     background-color: blue;
     border: 5px double yellow;
     border-radius:10px;
@@ -8,7 +8,7 @@ h2{
     animation-name: sabareesan ;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-direction: normal;
+    animation-direction:alternate-reverse;
 }
 @keyframes sabareesan
 {
