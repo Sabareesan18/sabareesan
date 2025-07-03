@@ -6,9 +6,8 @@ import reportWebVitals from './reportWebVitals';
 var sobj={
   rno:1001,
   sname:"sabareesan",
-  mark1:99,
-  mark2:98,
-  mark3:66
+  marks:[98,97,96]
+  
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
