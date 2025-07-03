@@ -1,4 +1,54 @@
-function App(props)
+function App()
+{
+  return(
+<>
+<h1>React Form</h1>
+<input type="text"></input><br></br>
+<input type="password"></input><br></br>
+<input type="number"></input><br></br>
+<label>select gender:</label>
+<input type="radio"name="gen"></input>male
+<input type="radio"name="gen"></input>female
+<input type="radio"name="gen"></input>others
+<br></br>
+<label>select course</label>
+<input type="checkbox"></input>c
+<input type="checkbox"></input>c++
+<input type="checkbox"></input>java
+<input type="checkbox"></input>python
+<input type="checkbox"></input>web design
+<input type="checkbox"></input>reactjs
+<br></br>
+<label>type your address/feedback</label>
+<textarea rows="6 "column ="5"></textarea>
+<br></br>
+<select>
+  <option>sunday</option>
+  <option>monday</option>
+  <option>tuesday</option>
+  <option>wednesday</option>
+  <option>thursday</option>
+  <option>friday</option>
+  <option>saturday</option>
+</select>
+<br></br>
+<form>
+<label>enter your email id</label>
+<input type="email"></input>
+<br></br>
+<input type="submit"></input>
+</form>
+
+
+</>
+
+
+
+  )
+}
+export default App
+
+/*function App(props)
 {
   return(
     <>
