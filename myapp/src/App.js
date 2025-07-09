@@ -1,5 +1,29 @@
 function App()
 {
+
+  const dis=(event)=>{
+    var k=event.target.value
+    document.getElementById("res1").innerHTML="you are typing..."+k
+  
+  }
+return(
+  <>
+  <input type="text" onChange={(e)=>dis(e)}></input>
+  <input type="text"onChange={(e)=>dis(e)}></input>
+  <div id="res1"></div>
+  
+  
+  </>
+
+
+
+
+)
+}
+export default App
+
+/*function App()
+{
   return(
 <>
 <h1>React Form</h1>
