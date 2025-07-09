@@ -36,15 +36,25 @@ function App()
 <label>enter your email id</label>
 <input type="email"></input>
 <br></br>
+<label>select exam time:</label>
+<input type="time"></input>
+<br></br>
+<input type="week"></input>
+<br></br>
+<label>upload your photo</label>
+<input type="file"></input>
+<br></br>
+volume<input type="range"max="1"style={{width:"30px"}}></input>
+<br></br>
+<input type="hidden"value="100"name="b1"></input>
+<br></br><br></br><br></br>
 <input type="submit"></input>
+<input type="button"value="clickme"></input>
+<input type="reset"></input>
 </form>
-
-
 </>
 
-
-
-  )
+)
 }
 export default App
 
