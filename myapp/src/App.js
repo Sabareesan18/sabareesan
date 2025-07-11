@@ -1,5 +1,69 @@
 function App()
 {
+const dis=(e)=>{
+  var k=e.target.id
+  document.getElementById("res").innerHTML="cursor inside"+k
+}
+  const show=(e)=>{
+    var s=e.target.id
+  document.getElementById("res").innerHTML="cursor outside"+s
+}
+return(
+  <>
+  <h1>event handling -onFocus-onBlur</h1>
+  <input type="text"id="t1"onFocus={(e)=>dis(e)} onBlur={(e)=>show(e)}></input><br></br>
+  <input type="text"id="t2"onFocus={(e)=>dis(e)} onBlur={(e)=>show(e)}></input><br></br>
+  <div id="res"></div>
+  </>
+)
+}
+export default App
+
+
+/*function App()
+{
+  const dis=(event)=>{
+    var k=event.target.value
+    var tbname=event.target.tbname
+    var idname=event.target.id
+    var tagname=event.target.tagName
+    document.getElementById("res1").innerHTML="you are typing..."+k+" name:"+tbname+" id:"+idname+ "tagName:"+tagname
+  }
+  return(
+    <>
+    <input type="text"text id="t1"name="textbox1"onChange={(e)=>dis(e)}></input>
+      <input type="text"text id="t2" name="textbox2"onChange={(e)=>dis(e)}></input>
+        <input type="text"text id="t3"name="textbox3"onChange={(e)=>dis(e)}></input>
+        <textarea id="addbox"name="address"onChange={(e)=>dis(e)}></textarea>
+        <div id="res1"></div>
+    
+    
+    </>
+  )
+
+}
+export default App
+
+
+/*function App()
+{
+  const dis=(event)=>{
+    var k=event.target.value
+    document.getElementById("res1").innerHTML="you are typing..."+k
+  }
+  return(
+    <>
+    <input type="text"onChange={(e)=>dis(e)}></input>
+     <input type="text"onChange={(e)=>dis(e)}></input>
+     <div id="res1"></div>
+
+    
+    </>
+  )
+}
+export default App
+/*function App()
+{
   const dis=(event)=>{
     var k=event.target.value
     var tbname=event.target.name
