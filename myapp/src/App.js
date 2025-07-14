@@ -1,5 +1,25 @@
 function App()
 {
+  const dis=(event)=>{
+    event.preventDefault()
+    console.log("submit button pressed")
+  }
+  
+return(
+  
+  <form onSubmit={(e)=>dis(e)}>
+<h1>onSubmit event</h1>
+<input type="text"name="t1"></input><br></br>
+<input type="text"name="t2"></input><br></br>
+<input type="text"name="t3"></input><br></br>
+<input type="submit"value="clickme"></input>
+</form>
+  
+)
+}
+export default App
+/*function App()
+{
   const dis=()=>{
     var a500=document.getElementById("a500").value*500
     var a200=document.getElementById("a200").value*200
