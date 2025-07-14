@@ -1,5 +1,32 @@
 function App()
 {
+  const dis=()=>{
+    var a500=document.getElementById("a500").value*500
+    var a200=document.getElementById("a200").value*200
+    var a100=document.getElementById("a100").value*100
+    document.getElementById("res").value=a500+a200+a100
+  }
+
+  
+  return(
+    <>
+        <form onInput={dis}>  
+          <h1>onInput Demo</h1>
+   500x<input type="text"id="a500"></input><br></br>
+   200x<input type="text"id="a200"></input><br></br>
+   100x<input type="text"id="a100"></input><br></br>
+   <input type="text"id="res"></input></form>
+    
+    </>
+  )
+}
+export default App
+
+
+
+/*
+function App()
+{
 const dis=(e)=>{
   var k=e.target.id
   document.getElementById("res").innerHTML="cursor inside"+k
