@@ -1,5 +1,15 @@
 function App()
 {
+  return(
+    <>
+    <input type="text"value="sabareesan"></input>
+    
+    </>
+  )
+}
+export default App
+/*function App()
+{
   const dis=(event)=>{
     event.preventDefault()
     console.log("submit button pressed")
