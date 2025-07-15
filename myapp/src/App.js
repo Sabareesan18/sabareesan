@@ -1,4 +1,21 @@
+import {useState} from 'react'
 function App()
+{
+  const[uname,setUname]=useState("sabareesan")
+  const unfun=(e)=>{
+    setUname(e.target.value)
+  }
+
+  return(
+    <>
+    <input type="text"value={uname} name="un"onChange={(e)=>unfun(e)}></input>
+    
+    
+    </>
+  )
+}
+export default App
+/*function App()
 {
   return(
     <>
