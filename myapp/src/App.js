@@ -2,6 +2,25 @@ import {useState} from 'react'
 function App()
 {
   const[uname,setUname]=useState("sabareesan")
+  const[city,setCity]=useState("karur")
+  const unfun=(e)=>{
+    setUname(e.target.value)
+
+  }
+return(
+  <>
+  <input type="text"value={uname}onChange={(e)=>{unfun(e)}}></input>
+  <input type="text"value={city}onChange={(e)=>{unfun(e)}}></input>
+  </>
+)
+
+}
+export default App
+
+/*import {useState} from 'react'
+function App()
+{
+  const[uname,setUname]=useState("sabareesan")
   const unfun=(e)=>{
     setUname(e.target.value)
   }
