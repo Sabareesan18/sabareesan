@@ -5,12 +5,16 @@ function App()
   const[city,setCity]=useState("karur")
   const unfun=(e)=>{
     setUname(e.target.value)
+  }
+    const cityfun=(e)=>{
+    setCity(e.target.value)
+
 
   }
 return(
   <>
   <input type="text"value={uname}onChange={(e)=>{unfun(e)}}></input>
-  <input type="text"value={city}onChange={(e)=>{unfun(e)}}></input>
+  <input type="text"value={city}onChange={(e)=>{cityfun(e)}}></input>
   </>
 )
 
