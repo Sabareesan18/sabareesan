@@ -1,4 +1,30 @@
-import {useState,useEffect}from 'react'
+import {useState,useEffect} from 'react'
+function App()
+{
+  const[title,SetTitle]=useState("sabareesan")
+   useEffect(()=>{
+    document.title=title
+    // don't use:setstate here
+    //SetTitle("jayaraman")
+   })
+   
+   const dis=()=>{
+    SetTitle("karthi")
+   }
+    
+  
+  return(
+     <>
+     <h1>use effect hook</h1>
+     {title}
+    <button onClick={dis}>clickme</button>     
+     </>
+
+
+  )
+}
+export default App
+/*import {useState,useEffect}from 'react'
 function App(){
  const[title,setTitle]=useState("sabareesan")
  useEffect(()=>{
