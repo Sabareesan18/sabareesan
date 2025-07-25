@@ -1,4 +1,25 @@
-import {useEffect} from 'react'
+import {useState,useEffect}from 'react'
+function App()
+{
+const[city,SetCity]=useState("karur")
+useEffect (()=>{
+  setTimeout(()=>{
+  document.title="jayaraman"
+  SetCity("chennai")
+},3000)
+})
+
+  return(
+    <>
+    <h1>data:{document.title}</h1>
+    <h1>city:{city}</h1>
+
+    
+    </>
+  )
+}
+export default App
+/*import {useEffect} from 'react'
 function App()
 {
 useEffect(()=>{
