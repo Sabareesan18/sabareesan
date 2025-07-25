@@ -1,4 +1,23 @@
-import {useState,useEffect} from 'react'
+import {useEffect} from 'react'
+function App()
+{
+useEffect(()=>{
+
+  setTimeout(()=>{
+    document.title="sabareesan"
+},3000)
+})
+   return(
+    <>
+    <h1>{document.title}</h1>
+    </>
+
+  )
+}
+export default App
+
+
+/*import {useState,useEffect} from 'react'
 function App()
 {
   const[title,SetTitle]=useState("sabareesan")
