@@ -1,4 +1,27 @@
-import {useState,useEffect}from 'react'
+import{useState,useEffect}from 'react'
+function App()
+{
+
+const[dt,setDt]=useState(Date())
+useEffect (()=>{
+  console.log(dt)
+  setTimeout(()=>{
+    setDt(Date())
+  },1000)
+})
+
+  
+
+  
+  return(
+    <>
+    current Date&Time:{dt}
+    </>
+
+  )
+}
+export default App
+/*import {useState,useEffect}from 'react'
 function App()
 {
 const[city,SetCity]=useState("karur")
