@@ -1,4 +1,26 @@
-import{useState,useEffect}from 'react'
+import{useForm}from 'react-hook-form'
+function App()
+{
+  const{register,handleSubmit}=useForm()
+  const dis=(data)=>{
+    console.log(data)
+  }
+return(
+  <form onSubmit={handleSubmit(dis)}>
+    <input type="text" placeholder='username' name="un"{...register("un")}></input><br></br>
+    <input type="password" placeholder='password' name="pw"{...register("pw")}></input><br></br>
+    <input type="email" placeholder='email' name="email"{...register("email")}></input><br></br>
+    <input type="submit"></input>
+
+
+  
+  
+  </form>
+)
+
+}
+export default App
+/*import{useState,useEffect}from 'react'
 function App()
 {
 
