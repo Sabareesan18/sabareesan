@@ -1,21 +1,21 @@
 import{useForm}from 'react-hook-form'
 function App()
-{
-  const{register,handleSubmit}=useForm()
+{   
+  
+  const{register,handleSubmit,formState:{errors}}=useForm()
   const dis=(data)=>{
     console.log(data)
   }
+
+  
 return(
   <form onSubmit={handleSubmit(dis)}>
-    <input type="text" placeholder='username' name="un"{...register("un")}></input><br></br>
+    <input type="text"  placeholder='userName' name="un"{...register("un",{required:true})}>
+    {errors.un && errors.un.type==="required" && "username should not be empty"}</input><br></br>
     <input type="password" placeholder='password' name="pw"{...register("pw")}></input><br></br>
     <input type="email" placeholder='email' name="email"{...register("email")}></input><br></br>
     <input type="submit"></input>
-
-
-  
-  
-  </form>
+    </form>
 )
 
 }
@@ -604,5 +604,5 @@ function App() {
   );
 }
 
-export default App;
+export default App
 */
