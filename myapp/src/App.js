@@ -10,9 +10,12 @@ function App()
   
 return(
   <form onSubmit={handleSubmit(dis)}>
-    <input type="text"  placeholder='userName' name="un"{...register("un",{required:true})}>
-    {errors.un && errors.un.type==="required" && "username should not be empty"}</input><br></br>
-    <input type="password" placeholder='password' name="pw"{...register("pw")}></input><br></br>
+    <input type="text"  placeholder='userName' name="un"{...register("un",{required:true,miniLength:5})}></input>
+    {errors.un && errors.un.type==="required" && "username should not be empty"}
+    {errors.un && errors.un.type==="miniLength" && <font color='red'>"must need 5 letters"</font>}
+    <br></br>
+    <input type="text" placeholder='password' name="pw"{...register("pw",{pattern:/^[a-z0-9A-Z]{10,15}$/})}></input>
+    {errors.pw && errors.pw.type==="pattern" && "password only 10to 15"}<br></br>
     <input type="email" placeholder='email' name="email"{...register("email")}></input><br></br>
     <input type="submit"></input>
     </form>
