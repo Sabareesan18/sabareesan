@@ -1,9 +1,16 @@
 import{useForm}from 'react-hook-form'
+import{useState}from 'react'
 function App()
 {   
-  
+  const[spacerr,setSpacerr]=useState("")
   const{register,handleSubmit,formState:{errors}}=useForm()
   const dis=(data)=>{
+    if(data.un.trim()==="")
+    {
+      setSpacerr("do not type continious spaces only")
+      console.log("iam not allow spaces")
+    }
+
     console.log(data)
   }
 
