@@ -1,4 +1,38 @@
-import{useForm}from 'react-hook-form'
+import React from 'react'
+class App extends React.Component
+{
+  constructor()
+  {
+    super()
+    this.state={
+      rno:1001,
+      sname:"sabaree",
+      mark:83
+    }
+  }
+  render()
+  {
+    return(
+      <>
+      <h1>this is class component</h1>
+      <h2>roll Number:{this.state.rno}</h2>
+      <h2>student Name:{this.state.sname}</h2>
+      <h3>student Mark:{this.state.mark}</h3>
+      </>
+    )
+  }
+}
+export default App
+
+
+
+
+
+
+
+
+
+/*import{useForm}from 'react-hook-form'
 import{useState}from 'react'
 function App()
 {   
