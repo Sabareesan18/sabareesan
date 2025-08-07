@@ -7,8 +7,30 @@ class App extends React.Component
     this.state={
       rno:1001,
       sname:"sabaree",
-      mark:83
+      mark:83,
+      date:Date()
     }
+  }
+  shouldComponentUpdate()
+  {
+    return true;
+  }
+  componentDidMount()
+  {  
+    setTimeout(()=>{
+   this.setState({mark:100,sname:"sabareesan",date:Date()})
+  
+    },4000)
+  
+  }
+  getSnapshotBeforeUpdate(preProps,prevState)
+  {
+    document.getElementById("res1").innerHTML="<br>Old Value:"+prevState.marks+" "+prevState.sname+"  "+prevState.date
+
+  }
+  componentDidUpdate()
+  {
+    document.getElementById("res").innerHTML="UPDATE SUCCESS"
   }
   render()
   {
@@ -18,6 +40,9 @@ class App extends React.Component
       <h2>roll Number:{this.state.rno}</h2>
       <h2>student Name:{this.state.sname}</h2>
       <h3>student Mark:{this.state.mark}</h3>
+      <h3>Date:{this.state.date}</h3>
+      <div id ="res"></div>
+      <div id="res1"></div>
       </>
     )
   }
