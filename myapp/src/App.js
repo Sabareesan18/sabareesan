@@ -1,4 +1,55 @@
 import React from 'react'
+class Child extends React.Component
+{
+  componentWillUnmount()
+  {
+    document.getElementById("res").innerHTML="component deleted"
+  }
+  render()
+  {
+    return(
+    <>
+    <h1>this is child component</h1>
+    </>
+    )
+  }
+}
+  class App extends Child
+  {
+    constructor()
+    {
+      super()
+      this.state={
+        visible:true
+      }
+    }
+    render()
+    {
+      const delfun=()=>{
+        this.setState({visible:false})
+      }
+      var mycomp
+      if (this.state.visible===true)
+      {
+         mycomp=<Child/>
+      }
+
+    return(
+      <>
+      {mycomp}
+      <h2>This is parent Main Component</h2>
+      <button onClick={delfun}>Delete child component</button>
+      <div id="res"></div>
+      </>
+    )
+  }
+}
+export default App
+
+
+
+
+/*import React from 'react'
 class App extends React.Component
 {
   constructor()
