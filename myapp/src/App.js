@@ -1,4 +1,35 @@
-import React from 'react'
+import{useState}from 'react'
+import Axios from'axios'
+function App()
+{
+  const[city,setCity]=useState("karur")
+  const changeCity=(e)=>{
+    setCity(e.target.value)
+}
+const getreport=()=>{
+  const apiurl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=83e61f5ae3c9761e3b419e37b1190728`
+  console.log("--->",apiurl)
+  Axios.get(apiurl).then((res)=>{
+    console.log(res.data)
+
+  }).catch((err)=>{
+    console.log(err.response.data)
+  })
+}
+
+
+  return(
+    <>
+    <h3><center>WEATHER REPORT</center></h3>
+    <input type="text" value={city} onChange={(e)=>changeCity(e)} placeholder="enter city name"></input>
+    <input type="button" onClick={getreport}value="get report"></input>    
+    </>
+  )
+}
+export default App
+
+
+/*import React from 'react'
 class Child extends React.Component
 {
   componentWillUnmount()
@@ -9,6 +40,9 @@ class Child extends React.Component
   {
     return(
     <>
+    <h1>this is child component</h1>
+    <h1>this is child component</h1>
+    <h1>this is child component</h1>
     <h1>this is child component</h1>
     </>
     )
